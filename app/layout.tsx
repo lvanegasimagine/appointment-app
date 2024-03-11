@@ -5,7 +5,7 @@ import Header from './_components/Header'
 // import Footer from './_components/Footer'
 import { ClerkProvider } from '@clerk/nextjs'
 import { Toaster } from '@/components/ui/sonner'
-
+import { SpeedInsights } from '@vercel/speed-insights/next';
 const outfit = Outfit({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -25,6 +25,7 @@ export default function RootLayout ({
           <div className="md:px-20">
             <Header />
             {children}
+            <SpeedInsights />
             <Toaster />
           </div>
           {/* <Footer /> */}
